@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+*{
+    box-sizing: border-box;
+}
+body
+{
+    background: linear-gradient(90deg,#808080,#000000) no-repeat center center/cover;
+    font-family: 'Bubblegum Sans',sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1{
+    margin:10px;
+    color: white;
+}
+
+.box{
+    background-color: lightcoral;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 400px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(255,255,255, 0.8);
+    transform: translateX(500%);
+    transition: transform 1.2s ease;
+}
+
+.box:nth-of-type(even){
+    transform: translateX(-500%);
+}
+
+.box.show{
+    transform: translateX(0);
+}
+
+@media (max-width: 480px) {
+    .box{
+        width: 250px;
+        height: 200px;
+    }
+}
